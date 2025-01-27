@@ -160,15 +160,9 @@ INSERT INTO test.ussers_categorias (id_usuario, id_categoria) VALUES
 -- Tu código aquí
 
 SELECT 
-    ussers.id_usuario,
-    ussers.nombre, 
-    ussers.apellido, 
-    ussers.email, 
-    ussers.edad,
-    roles.nombre_rol, 
-    categorias.nombre_categoria
-FROM test.ussers
-JOIN test.roles ON ussers.id_rol = ussers_categorias.id_usuario
-JOIN test.ussers_categorias ON ussers.id_categoria = ussers_categorias.id_categoria
+    *
+FROM test.ussers_categorias
+JOIN test.ussers ON ussers.id_usuario = ussers_categorias.id_usuario
+JOIN test.categorias ON categorias.id_categoria = ussers_categorias.id_categoria;
 
 
