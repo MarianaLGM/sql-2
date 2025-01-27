@@ -177,14 +177,4 @@ FROM test.ussers
 JOIN test.ussers_categorias ON ussers.id_rol = ussers_categorias.id_usuario
 JOIN test.ussers_categorias ON ussers.id_categoria = ussers_categorias.id_categoria
 
-SELECT 
-    ussers.id_usuario,
-    ussers.nombre, 
-    ussers.apellido, 
-    ussers.email, 
-    ussers.edad, 
-    roles.nombre_rol, 
-    categorias.nombre_categoria
-FROM test.ussers_categorias
-JOIN test.categorias ON ussers.id_categoria = categorias.id_categoria
-JOIN test.roles ON ussers.id_rol = roles.id_rol;
+
