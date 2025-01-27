@@ -160,9 +160,11 @@ INSERT INTO usuarios_categorias (id_usuario, id_categoria) VALUES
 (2, 4), (2, 5),
 (3, 6), (3, 7),
 (4, 8), (4, 9), (4, 10),
+
 ```
 
 ### PASO 3 - Consulta para ver la unión de usuarios, roles, categorías
 
 Haz un `JOIN` que saque usuarios.id_usuario, usuarios.nombre, usuarios.apellido, usuarios.email, usuarios.edad,
 roles.nombre_rol, categorias.nombre_categoria
+
