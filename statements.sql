@@ -156,12 +156,6 @@ INSERT INTO test.ussers_categorias (id_usuario, id_categoria) VALUES
 (3, 6), (3, 7),
 (4, 8), (4, 9), (4, 10);
 
-INSERT INTO Autores (AutorID, Nombre, Nacionalidad) VALUES (1, 'Gabriel García Márquez', 'Colombiana');
-INSERT INTO Libros (LibroID, Titulo, AñoPublicacion) VALUES (1, 'Cien años de soledad', 1967);
--- Establecer la relación entre García Márquez y 'Cien años de soledad'
-INSERT INTO LibrosAutores (AutorID, LibroID) VALUES (1, 1);
-
-
 -- PASO 3
 -- Tu código aquí
 
@@ -174,7 +168,7 @@ SELECT
     roles.nombre_rol, 
     categorias.nombre_categoria
 FROM test.ussers
-JOIN test.ussers_categorias ON ussers.id_rol = ussers_categorias.id_usuario
+JOIN test.roles ON ussers.id_rol = ussers_categorias.id_usuario
 JOIN test.ussers_categorias ON ussers.id_categoria = ussers_categorias.id_categoria
 
 
