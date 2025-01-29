@@ -166,3 +166,18 @@ JOIN test.ussers ON ussers.id_usuario = ussers_categorias.id_usuario
 JOIN test.categorias ON categorias.id_categoria = ussers_categorias.id_categoria;
 
 
+--CORREGIDO, el anterior es incorrecto
+SELECT 
+    ussers.id_usuario,
+    ussers.nombre, 
+    ussers.apellido, 
+    ussers.email, 
+    ussers.edad, 
+    roles.nombre_rol, 
+    categorias.nombre_categoria
+FROM test.ussers
+JOIN test.roles ON ussers.id_rol = roles.id_rol
+JOIN test.ussers_categorias ON ussers.id_usuario = ussers_categorias.id_usuario
+JOIN test.categorias ON ussers_categoria.id_categoria=categorias.id_categoria;
+
+
